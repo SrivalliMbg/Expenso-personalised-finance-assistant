@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Expenso Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="profile-row">
+          <img src="{{ url_for('static', filename='images/user avatar.jpg') }}" alt="Avatar" class="avatar">
+          <span class="username" id="sidebarUsername">{{ username }}</span>
+        </div>
+      </div>
+      <nav class="menu">
+        <a href="/accounts_page">Accounts</a>
+        <a href="/cards_page">Cards</a>
+        <a href="/insurance_page">Insurance</a>
+        <a href="/investments_page">Investments</a>
+        <a href="/recent_page">Recent Transactions</a>
+        <a href="/expenses_page">Expenses</a>
+        <a href="/logout_page" class="logout" onclick="return confirmLogout();">Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <section class="top-section">
+        <div class="chart">
+          <h3>Monthly Chart</h3>
+          <canvas id="spendingChart"></canvas>
+        </div>
+        <div class="stats">
+          <div class="stat-box">Total Spent: ₹<span id="totalSpent">--</span></div>
+          <div class="stat-box">Budget: ₹<span id="budget">--</span></div>
+        </div>
+      </section>
+
+      <section class="bottom-section">
+        <h3>AI Insights</h3>
+        <p id="ai-insight">Analyzing your expenses...</p>
+        <div id="chatbot-container"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='js/homeFE.js') }}"></script>
+</body>
+</html>

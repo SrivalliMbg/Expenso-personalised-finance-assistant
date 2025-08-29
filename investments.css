@@ -1,0 +1,73 @@
+.card-section {
+  margin-bottom: 6px;
+}
+.card-section h3 {
+  margin-left: 16px;
+  font-size: 1.5rem;
+}
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 16px;
+  min-height: 240px;
+}
+.card-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 16px;
+  margin-bottom: 0;
+}
+.card-section-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.card {
+    min-width: 320px;
+    max-width: 340px;
+    background: #8e6be8;
+    color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(40,62,123,0.15);
+    padding: 28px 24px 20px 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    transition: box-shadow 0.2s;
+    border: 2px solid #fff;   /* White border */
+}
+
+.card.card-input {
+  background: #f3f3fa;
+  color: #222;
+  box-shadow: none;
+}
+.card .save-btn {
+  margin-top: 12px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #3f3f57;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.add-btn {
+  background: #464667;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #5a5a7a;
+}

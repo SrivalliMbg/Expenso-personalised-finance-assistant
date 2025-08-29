@@ -1,0 +1,145 @@
+/* insurance.css */
+
+/* Section styling */
+.insurance-section {
+  margin-bottom: 12px; /* small consistent gap between sections */
+}
+
+/* Section header (title + add button) */
+.insurance-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* heading left, button right */
+  padding: 0 16px;
+  margin-bottom: 8px;
+}
+
+.insurance-section-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Insurance container (horizontal scroll like cards) */
+.insurance-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 16px 0;
+}
+
+/* Policy card styling */
+.policy-card {
+  min-width: 320px;
+  max-width: 340px;
+  background: #c098d0; /* different base color than cards */
+  color: #66406f;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(40,62,123,0.15);
+  padding: 28px 24px 20px 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  transition: box-shadow 0.2s;
+}
+
+/* Input-mode policy card */
+.policy-card.policy-input {
+  background: #f3f3fa;
+  color: #222;
+  box-shadow: none;
+}
+
+/* Policy card headings/text */
+.policy-card h4 {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.policy-card p {
+  margin: 4px 0;
+  font-size: 1rem;
+}
+
+/* Input fields inside policy-input */
+.policy-card.policy-input input[type="text"],
+.policy-card.policy-input input[type="number"] {
+  width: 200px;
+  padding: 4px 8px;
+  margin: 4px 0;
+  border-radius: 6px;
+  border: 1px solid #f8e6fe;
+  font-size: 1rem;
+}
+
+.policy-card.policy-input span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Save button */
+.policy-card .save-btn {
+  margin-top: 12px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #3f3f57;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.policy-card .save-btn:hover {
+  background: #505070;
+}
+
+/* Add button */
+.add-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #3f3f57;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #505070;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .policy-card, .policy-card.policy-input {
+    min-width: 90vw;
+    max-width: 95vw;
+    padding: 16px 8px 12px 8px;
+  }
+  .insurance-container {
+    gap: 12px;
+  }
+}
+
+.add-btn {
+  background: #464667;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #5a5a7a;
+}

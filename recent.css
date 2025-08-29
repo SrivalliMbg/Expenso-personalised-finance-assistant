@@ -1,0 +1,125 @@
+.transaction-section {
+  margin-bottom: 20px;
+}
+
+.transactions-page {
+  flex-grow: 1;       /* take remaining width next to sidebar */
+  padding: 20px;
+  background: #f4f4f9;
+  font-size: 1rem;    /* keep consistent font size */
+}
+
+.transaction-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.transaction-header h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c2f48;
+  margin: 0;
+}
+
+/* Add Button */
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #2c2f48;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #3c4060;
+  transform: scale(1.05);
+}
+
+/* Transactions Container */
+.transaction-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Transaction Card */
+.transaction-card {
+  flex: 1 1 340px;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  padding: 24px;
+  border-left: 8px solid transparent;
+  transition: transform 0.25s;
+}
+
+.transaction-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.transaction-card h4 {
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+  color: #2c2f48;
+}
+
+.transaction-card p {
+  margin: 6px 0;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* Transaction Types */
+.transaction-card.debit { border-left-color: #e74c3c; }
+.transaction-card.credit { border-left-color: #2ecc71; }
+.transaction-card.transfer { border-left-color: #3498db; }
+
+/* Input Card (when adding new transaction) */
+.input-card {
+  background: #fdf7e3;
+  border-left-color: #f39c12 !important;
+}
+
+.input-card input,
+.input-card select {
+  margin: 8px 0;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 95%;
+  font-size: 1.05rem;
+}
+
+/* Save Button */
+.save-btn {
+  margin-top: 14px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  background: #2c2f48;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #3c4060;
+  transform: scale(1.05);
+}
+body, .container, .transaction-section {
+  font-size: 1rem !important;
+  transform: none !important;
+  zoom: 1 !important;
+}
